@@ -1,9 +1,9 @@
+import Hero from "./components/Hero";
+
 function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-950">
-      <h1 className="text-4xl font-bold text-white">
-        AWS Community Website
-      </h1>
+    <main>
+      <Hero />
     </main>
   );
 }

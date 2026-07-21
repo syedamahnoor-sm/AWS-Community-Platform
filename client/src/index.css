@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+:root {
+  --bg-primary: #0f0f10;
+  --bg-secondary: #18181b;
+  --bg-card: #202024;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cfcfd3;
+  --text-muted: #8e8e95;
+
+  --purple: #8b5cf6;
+  --purple-light: #a78bfa;
+  --aws-orange: #ff9900;
+
+  --border: #2f2f35;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +24,107 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  font-family:
-    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Inter", sans-serif;
+}
+
+.font-heading {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.network-node {
+  display: flex;
+  width: 92px;
+  height: 92px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid rgb(139 92 246 / 45%);
+  border-radius: 9999px;
+  background: rgb(24 24 27 / 92%);
+  color: #e4e4e7;
+  backdrop-filter: blur(12px);
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+  animation: node-float 6s ease-in-out infinite;
+}
+
+.network-node:nth-of-type(even) {
+  animation-delay: -2s;
+}
+
+.network-node:hover {
+  transform: translateY(-5px) scale(1.04);
+  border-color: rgb(168 85 247 / 80%);
+  box-shadow: 0 0 28px rgb(139 92 246 / 18%);
+}
+
+.network-node span {
+  max-width: 78px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.network-icon {
+  width: 23px;
+  height: 23px;
+  color: #c084fc;
+  stroke-width: 1.8;
+}
+
+.network-node-orange {
+  border-color: rgb(255 153 0 / 55%);
+}
+
+.network-node-orange .network-icon {
+  color: #ff9900;
+}
+
+.aws-center-pulse::before {
+  position: absolute;
+  inset: -12px;
+  content: "";
+  border: 1px solid rgb(168 85 247 / 20%);
+  border-radius: 9999px;
+  animation: aws-pulse 4.5s ease-out infinite;
+}
+
+@keyframes node-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -5px;
+  }
+}
+
+@keyframes aws-pulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .network-node,
+  .aws-center-pulse::before {
+    animation: none;
+  }
 }
