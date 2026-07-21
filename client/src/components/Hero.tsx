@@ -9,23 +9,26 @@ import {
 
 const Hero = () => {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden px-6 py-24">
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center overflow-hidden px-6 py-16 md:py-20 lg:py-24"
+    >
       {/* Background glow */}
-      <div className="absolute left-1/2 top-1/3 -z-10 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-purple-600/15 blur-[150px]" />
+      <div className="absolute left-1/2 top-1/3 -z-10 h-130 w-130 -translate-x-1/2 rounded-full bg-green-500/5 blur-[150px]" />
 
       {/* Subtle grid */}
-      <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:48px_48px]" />
+      <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-size-[48px_48px]" />
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-16 lg:grid-cols-2">
         {/* Left content */}
         <div className="max-w-3xl">
-          <span className="mb-6 inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300">
+          <span className="mb-6 inline-flex items-center rounded-full border border-green-400/30 bg-green-400/10 px-4 py-2 text-sm font-medium text-green-300">
             AWS Student Builder Group LGU
           </span>
 
           <h1 className="font-heading text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
             Build. Learn.
-            <span className="block bg-gradient-to-r from-purple-400 via-purple-500 to-orange-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-green-400 via-green-500 to-green-600 bg-clip-text text-transparent">
               Connect.
             </span>
           </h1>
@@ -39,14 +42,14 @@ const Hero = () => {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#events"
-              className="inline-flex items-center justify-center rounded-lg bg-purple-600 px-6 py-3 font-semibold text-white transition duration-300 hover:bg-purple-500"
+              className="inline-flex items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-semibold text-black transition duration-300 hover:bg-green-600 hover:scale-105"
             >
               Explore Events
             </a>
 
             <a
               href="#join"
-              className="inline-flex items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/50 px-6 py-3 font-semibold text-white transition duration-300 hover:border-purple-500 hover:bg-zinc-900"
+              className="inline-flex items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900/50 px-6 py-3 font-semibold text-white transition duration-300 hover:border-green-400 hover:bg-zinc-900 hover:scale-105"
             >
               Join the Community
             </a>
@@ -54,11 +57,11 @@ const Hero = () => {
         </div>
 
         {/* Right visual */}
-        <div className="relative hidden min-h-[520px] items-center justify-center lg:flex">
+        <div className="relative hidden min-h-130 items-center justify-center lg:flex">
           {/* Soft background glow */}
-          <div className="absolute h-[360px] w-[360px] rounded-full bg-purple-600/10 blur-[110px]" />
+          <div className="absolute h-90 w-90 rounded-full bg-green-500/5 blur-[110px]" />
 
-          <div className="relative h-[500px] w-full max-w-[570px]">
+          <div className="relative h-125 w-full max-w-142.5">
             {/* Network lines and moving particles */}
             <svg
               viewBox="0 0 570 500"
@@ -73,9 +76,9 @@ const Hero = () => {
                   x2="1"
                   y2="1"
                 >
-                  <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.25" />
-                  <stop offset="50%" stopColor="#a855f7" stopOpacity="0.65" />
-                  <stop offset="100%" stopColor="#ff9900" stopOpacity="0.25" />
+                  <stop offset="0%" stopColor="#15803d" stopOpacity="0.22" />
+                  <stop offset="50%" stopColor="#22c55e" stopOpacity="0.58" />
+                  <stop offset="100%" stopColor="#4ade80" stopOpacity="0.22" />
                 </linearGradient>
 
                 <filter id="particleGlow">
@@ -113,7 +116,7 @@ const Hero = () => {
 
               {/* Moving data particles */}
               <g filter="url(#particleGlow)">
-                <circle r="3.5" fill="#c084fc">
+                <circle r="3.5" fill="#4ade80">
                   <animateMotion
                     dur="5s"
                     repeatCount="indefinite"
@@ -121,7 +124,7 @@ const Hero = () => {
                   />
                 </circle>
 
-                <circle r="3" fill="#a855f7">
+                <circle r="3" fill="#22c55e">
                   <animateMotion
                     dur="6s"
                     begin="1.5s"
@@ -130,7 +133,7 @@ const Hero = () => {
                   />
                 </circle>
 
-                <circle r="3.5" fill="#ff9900">
+                <circle r="3.5" fill="#16a34a">
                   <animateMotion
                     dur="5.5s"
                     begin="0.75s"
@@ -146,7 +149,7 @@ const Hero = () => {
                 cy="250"
                 r="104"
                 fill="none"
-                stroke="#8b5cf6"
+               stroke="#22c55e"
                 strokeWidth="1"
                 strokeOpacity="0.11"
               />
@@ -156,25 +159,25 @@ const Hero = () => {
                 cy="250"
                 r="124"
                 fill="none"
-                stroke="#8b5cf6"
+                stroke="#22c55e"
                 strokeWidth="1"
                 strokeOpacity="0.07"
               />
             </svg>
 
             {/* Centre AWS node */}
-            <div className="aws-center-pulse absolute left-1/2 top-1/2 z-10 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-purple-400/45 bg-zinc-950/90 shadow-[0_0_45px_rgba(139,92,246,0.25)] backdrop-blur-xl">
+            <div className="aws-center-pulse absolute left-1/2 top-1/2 z-10 flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border border-green-500/40 bg-zinc-950/90 shadow-[0_0_45px_rgba(34,197,94,0.14)] backdrop-blur-xl">
               <CloudCog
                 size={28}
                 strokeWidth={1.7}
-                className="mb-2 text-purple-300"
+                className="mb-2 text-green-300"
               />
 
               <span className="font-heading text-4xl font-bold tracking-tight text-white">
                 AWS
               </span>
 
-              <span className="mt-1 text-xs font-semibold uppercase tracking-[0.32em] text-purple-300">
+              <span className="mt-1 text-xs font-semibold uppercase tracking-[0.32em] text-green-300">
                 SBG LGU
               </span>
             </div>
@@ -192,7 +195,7 @@ const Hero = () => {
             </div>
 
             {/* Certifications */}
-            <div className="network-node network-node-orange absolute right-[1%] top-[40%]">
+            <div className="network-node absolute right-[1%] top-[40%]">
               <Award className="network-icon" />
               <span>Certifications</span>
             </div>

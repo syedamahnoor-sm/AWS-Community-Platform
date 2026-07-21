@@ -9,9 +9,9 @@
   --text-secondary: #cfcfd3;
   --text-muted: #8e8e95;
 
-  --purple: #8b5cf6;
-  --purple-light: #a78bfa;
-  --aws-orange: #ff9900;
+  --green: #45ff58;
+  --green-light: #86ff91;
+  --green-dark: #22c55e;
 
   --border: #2f2f35;
 }
@@ -41,7 +41,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  border: 1px solid rgb(139 92 246 / 45%);
+  border: 1px solid rgb(34 197 94 / 40%);
   border-radius: 9999px;
   background: rgb(24 24 27 / 92%);
   color: #e4e4e7;
@@ -59,8 +59,8 @@ body {
 
 .network-node:hover {
   transform: translateY(-5px) scale(1.04);
-  border-color: rgb(168 85 247 / 80%);
-  box-shadow: 0 0 28px rgb(139 92 246 / 18%);
+  border-color: rgb(34 197 94 / 75%);
+  box-shadow: 0 0 28px rgb(34 197 94 / 14%);
 }
 
 .network-node span {
@@ -74,23 +74,15 @@ body {
 .network-icon {
   width: 23px;
   height: 23px;
-  color: #c084fc;
+  color: #22c55e;
   stroke-width: 1.8;
-}
-
-.network-node-orange {
-  border-color: rgb(255 153 0 / 55%);
-}
-
-.network-node-orange .network-icon {
-  color: #ff9900;
 }
 
 .aws-center-pulse::before {
   position: absolute;
   inset: -12px;
   content: "";
-  border: 1px solid rgb(168 85 247 / 20%);
+  border: 1px solid rgb(34 197 94 / 18%);
   border-radius: 9999px;
   animation: aws-pulse 4.5s ease-out infinite;
 }
