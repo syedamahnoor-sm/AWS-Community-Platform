@@ -22,7 +22,7 @@ const Navbar = () => {
             className="h-14 w-14 object-contain"
           />
 
-          <div className="leading-tight ml-2">
+          <div className="leading-tight">
             <h1 className="font-heading text-lg font-bold text-white">
               AWS <span className="text-green-400">SBG LGU</span>
             </h1>
