@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Events from "./Sections/Events";
+import Team from "./Sections/Teams";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <Events />
+      <Team />
     </main>
   );
 }
