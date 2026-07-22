@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Events from "./Sections/Events";
 import Team from "./Sections/Teams";
 import Testimonials from "./Sections/Testimonials";
+import JoinCommunity from "./Sections/JoinCommunity";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Events />
       <Team />
       <Testimonials />
+      <JoinCommunity />
     </main>
   );
 }
