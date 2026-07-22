@@ -4,6 +4,7 @@ import Events from "./Sections/Events";
 import Team from "./Sections/Teams";
 import Testimonials from "./Sections/Testimonials";
 import JoinCommunity from "./Sections/JoinCommunity";
+import Footer from "./Sections/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Team />
       <Testimonials />
       <JoinCommunity />
+      <Footer />
     </main>
   );
 }
