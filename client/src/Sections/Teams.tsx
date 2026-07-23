@@ -1,8 +1,10 @@
 import TeamCard from "../components/TeamCard";
 import { teamMembers } from "../data/team";
+import SectionWrapper from "../components/SectionWrapper";
 
 const Team = () => {
   return (
+    <SectionWrapper>
     <section
       id="team"
       className="relative overflow-hidden border-t border-white/5 px-6 py-24"
@@ -32,6 +34,7 @@ const Team = () => {
         </div>
       </div>
     </section>
+    </SectionWrapper>
   );
 };
 

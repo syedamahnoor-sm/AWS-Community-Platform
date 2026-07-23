@@ -11,5 +11,4 @@ export interface Event {
   image: string;
   status: EventStatus;
   registrationUrl?: string;
-  highlightsUrl?: string;
 }

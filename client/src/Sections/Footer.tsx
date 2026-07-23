@@ -1,6 +1,5 @@
 import { ArrowUp, Mail, MapPin } from "lucide-react";
 import {
-  FaGithub,
   FaInstagram,
   FaLinkedinIn,
   FaMeetup,
@@ -20,7 +19,7 @@ const communityLinks = [
     href: "#join",
   },
   {
-    label: "Upcoming Events",
+    label: "Events",
     href: "#events",
   },
   {
@@ -29,7 +28,7 @@ const communityLinks = [
   },
   {
     label: "Meetup Community",
-    href: "https://www.meetup.com/",
+    href: "https://www.meetup.com/aws-sbg-at-lahore-garrison-university/",
     external: true,
   },
 ];
@@ -147,26 +146,16 @@ const Footer = () => {
             </h2>
 
             <a
-              href="mailto:community@example.com"
+              href="mailto:awssbglgu@gmail.com"
               className="mt-5 flex items-center gap-3 text-sm text-zinc-500 transition hover:text-green-400"
             >
               <Mail size={18} />
-              community@example.com
+              awssbglgu@gmail.com
             </a>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-950 text-zinc-500 transition hover:-translate-y-1 hover:border-green-500 hover:text-green-400"
-              >
-                <FaInstagram size={18} />
-              </a>
-
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/aws-sbg-lgu/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
@@ -176,23 +165,13 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.meetup.com/"
+                href="https://www.meetup.com/aws-sbg-at-lahore-garrison-university/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Meetup"
                 className="flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-950 text-zinc-500 transition hover:-translate-y-1 hover:border-green-500 hover:text-green-400"
               >
                 <FaMeetup size={19} />
-              </a>
-
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-950 text-zinc-500 transition hover:-translate-y-1 hover:border-green-500 hover:text-green-400"
-              >
-                <FaGithub size={18} />
               </a>
             </div>
           </div>

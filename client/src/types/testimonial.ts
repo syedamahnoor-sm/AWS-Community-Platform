@@ -1,10 +1,13 @@
+export type TestimonialStatus = "pending" | "approved" | "rejected";
+
 export interface Testimonial {
-  id: number;
+  id: string;
   name: string;
   role: string;
   event: string;
   feedback: string;
   image?: string;
-  status: "pending" | "approved" | "rejected";
+  status: TestimonialStatus;
   createdAt: string;
+  updatedAt?: string;
 }

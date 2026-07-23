@@ -1,6 +1,8 @@
 import { useState } from "react";
 import EventCard from "../components/EventCard";
 import { previousEvents, upcomingEvents } from "../data/events";
+import { CalendarDays } from "lucide-react";
+import SectionWrapper from "../components/SectionWrapper";
 
 type EventTab = "upcoming" | "previous";
 
@@ -10,7 +12,20 @@ const Events = () => {
   const displayedEvents =
     activeTab === "upcoming" ? upcomingEvents : previousEvents;
 
+  const emptyState =
+    activeTab === "upcoming"
+      ? {
+          title: "No Upcoming Events Yet",
+          description:
+            "We're planning our next community sessions. Stay connected and check back soon for exciting AWS workshops and meetups.",
+        }
+      : {
+          title: "No Previous Events",
+          description:
+            "Our event archive will appear here once community events have been conducted.",
+        };
   return (
+    <SectionWrapper>
     <section
       id="events"
       className="relative overflow-hidden border-t border-white/5 px-6 py-24"
@@ -73,14 +88,34 @@ const Events = () => {
 
         <div
           key={activeTab}
-          className="mt-14 grid animate-[event-fade_350ms_ease-out] gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-14 animate-[event-fade_350ms_ease-out]"
         >
-          {displayedEvents.map((event) => (
-            <EventCard key={event.id} event={event} />
-          ))}
+          {displayedEvents.length > 0 ? (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {displayedEvents.map((event) => (
+                <EventCard key={event.id} event={event} />
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-zinc-700 bg-zinc-950/70 px-8 py-20 text-center">
+              <CalendarDays
+                size={42}
+                className="mb-5 text-green-500 opacity-80"
+              />
+
+              <h3 className="font-heading text-2xl font-semibold text-white">
+                 {emptyState.title}
+              </h3>
+
+              <p className="mt-3 max-w-md text-zinc-400 leading-7">
+                {emptyState.description}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>
+    </SectionWrapper>
   );
 };
 

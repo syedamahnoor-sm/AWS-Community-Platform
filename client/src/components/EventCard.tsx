@@ -2,7 +2,6 @@ import {
   ArrowUpRight,
   CalendarDays,
   Clock,
-  Images,
   MapPin,
 } from "lucide-react";
 import type { Event } from "../types/event";
@@ -62,23 +61,15 @@ const EventCard = ({ event }: EventCardProps) => {
           </div>
         </div>
 
-        {isUpcoming ? (
+        {isUpcoming && (
           <a
             href={event.registrationUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-5 py-3 font-semibold text-black transition hover:bg-green-400"
           >
             Join Event
             <ArrowUpRight size={18} />
-          </a>
-        ) : (
-          <a
-            href={event.highlightsUrl}
-            className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-zinc-900 px-5 py-3 font-semibold text-white transition hover:border-green-500 hover:text-green-400"
-          >
-            View Highlights
-            <Images size={18} />
           </a>
         )}
       </div>

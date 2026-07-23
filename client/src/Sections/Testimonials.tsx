@@ -1,9 +1,11 @@
 import TestimonialCard from "../components/TestimonialCard";
 import { testimonials } from "../data/testimonials";
 import FeedbackForm from "../components/FeedbackForm";
+import SectionWrapper from "../components/SectionWrapper";
 
 const Testimonials = () => {
   return (
+    <SectionWrapper>
     <section
       id="testimonials"
       className="relative overflow-hidden border-t border-white/5 px-6 py-24"
@@ -41,6 +43,7 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
+    </SectionWrapper>
   );
 };
 

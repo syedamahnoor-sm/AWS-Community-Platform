@@ -6,6 +6,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa6";
+import SectionWrapper from "../components/SectionWrapper";
 
 const communityBenefits = [
   "Hands-on AWS workshops",
@@ -16,6 +17,7 @@ const communityBenefits = [
 
 const JoinCommunity = () => {
   return (
+    <SectionWrapper>
     <section
       id="join"
       className="relative overflow-hidden border-t border-white/5 px-6 py-24"
@@ -62,21 +64,13 @@ const JoinCommunity = () => {
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="https://www.meetup.com/"
+                  href="https://www.meetup.com/aws-sbg-at-lahore-garrison-university/"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-semibold text-black transition hover:bg-green-400"
                 >
                   Join on Meetup
                   <ArrowUpRight size={18} />
-                </a>
-
-                <a
-                  href="mailto:community@example.com"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-zinc-700 bg-zinc-900 px-6 py-3 font-semibold text-white transition hover:border-green-500 hover:text-green-400"
-                >
-                  Contact the Team
-                  <Mail size={18} />
                 </a>
               </div>
             </div>
@@ -128,25 +122,14 @@ const JoinCommunity = () => {
 
                 <div className="mt-4 grid gap-3">
                   <a
-                    href="mailto:community@example.com"
+                    href="mailto:awssbglgu@gmail.com"
                     className="flex items-center gap-3 rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-300 transition hover:border-green-500/50 hover:text-green-400"
                   >
                     <Mail size={18} />
-                    community@example.com
+                    awssbglgu@gmail.com
                   </a>
-
                   <a
-                    href="#"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-3 rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-300 transition hover:border-green-500/50 hover:text-green-400"
-                  >
-                    <FaInstagram size={18} />
-                    Instagram
-                  </a>
-
-                  <a
-                    href="#"
+                    href="https://www.linkedin.com/company/aws-sbg-lgu/"
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-3 rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-zinc-300 transition hover:border-green-500/50 hover:text-green-400"
@@ -161,6 +144,7 @@ const JoinCommunity = () => {
         </div>
       </div>
     </section>
+    </SectionWrapper>
   );
 };
 

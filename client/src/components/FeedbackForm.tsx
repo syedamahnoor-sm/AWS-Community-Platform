@@ -1,5 +1,5 @@
 import { CheckCircle2, LoaderCircle, Send } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { useState, type ComponentProps } from "react";
 
 interface FeedbackFormData {
   name: string;
@@ -17,17 +17,18 @@ const initialFormData: FeedbackFormData = {
   consent: false,
 };
 
+type FormSubmitHandler = NonNullable<ComponentProps<"form">["onSubmit"]>;
+
 const FeedbackForm = () => {
-  const [formData, setFormData] =
-    useState<FeedbackFormData>(initialFormData);
+  const [formData, setFormData] = useState<FeedbackFormData>(initialFormData);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
   const [hasSubmitted, setHasSubmitted] = useState(false);
 
-  const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT || "";
+  const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit: FormSubmitHandler = async (event) => {
     event.preventDefault();
 
     setStatusMessage("");
@@ -39,28 +40,21 @@ const FeedbackForm = () => {
       );
       return;
     }
-
-    if (!formspreeEndpoint) {
-      setStatusMessage(
-        "The feedback form is currently in demo mode. Add a Formspree endpoint to enable real submissions.",
-      );
-      return;
-    }
-
     try {
       setIsSubmitting(true);
 
-      const response = await fetch(formspreeEndpoint, {
+      const response = await fetch(`${apiUrl}/testimonials`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error("Unable to submit feedback.");
+        throw new Error(result.message || "Unable to submit feedback.");
       }
 
       setHasSubmitted(true);
@@ -104,11 +98,7 @@ const FeedbackForm = () => {
         </div>
 
         {/* Feedback form */}
-        <form
-          onSubmit={handleSubmit}
-          className="p-7 sm:p-8"
-          noValidate
-        >
+        <form onSubmit={handleSubmit} className="p-7 sm:p-8" noValidate>
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
               <label

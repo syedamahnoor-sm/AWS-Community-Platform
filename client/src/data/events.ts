@@ -1,82 +1,57 @@
 import type { Event } from "../types/event";
 
 export const upcomingEvents: Event[] = [
-  {
-    id: 1,
-    title: "AWS Cloud Essentials",
-    description:
-      "Explore essential AWS cloud concepts, core services, and practical use cases through an interactive community session.",
-    date: "Coming Soon",
-    time: "To Be Announced",
-    location: "Lahore",
-    category: "Workshop",
-    image: "/events/aws-cloud-essentials.jpg",
-    status: "upcoming",
-    registrationUrl: "https://www.meetup.com/",
-  },
-  {
-    id: 2,
-    title: "Build on AWS",
-    description:
-      "A hands-on session designed to help participants understand how modern applications are built and deployed using AWS.",
-    date: "Coming Soon",
-    time: "To Be Announced",
-    location: "Lahore",
-    category: "Hands-on Lab",
-    image: "/events/build-on-aws.jpg",
-    status: "upcoming",
-    registrationUrl: "https://www.meetup.com/",
-  },
-  {
-    id: 3,
-    title: "AWS Community Meetup",
-    description:
-      "Connect with cloud enthusiasts, students, and industry professionals while learning from real AWS experiences.",
-    date: "Coming Soon",
-    time: "To Be Announced",
-    location: "Lahore",
-    category: "Community",
-    image: "/events/aws-community-meetup.jpg",
-    status: "upcoming",
-    registrationUrl: "https://www.meetup.com/",
-  },
+  //   {
+  //     id: 2,
+  //     title: "Build on AWS",
+  //     description:
+  //       "A hands-on session designed to help participants understand how modern applications are built and deployed using AWS.",
+  //     date: "Coming Soon",
+  //     time: "To Be Announced",
+  //     location: "Lahore",
+  //     category: "Hands-on Lab",
+  //     image: "/events/build-on-aws.jpg",
+  //     status: "upcoming",
+  //     registrationUrl: "https://www.meetup.com/",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "AWS Community Meetup",
+  //     description:
+  //       "Connect with cloud enthusiasts, students, and industry professionals while learning from real AWS experiences.",
+  //     date: "Coming Soon",
+  //     time: "To Be Announced",
+  //     location: "Lahore",
+  //     category: "Community",
+  //     image: "/events/aws-community-meetup.jpg",
+  //     status: "upcoming",
+  //     registrationUrl: "https://www.meetup.com/",
+  //   },
 ];
 
 export const previousEvents: Event[] = [
   {
-    id: 4,
-    title: "AWS Cloud 101",
+    id: 2,
+    title: "AWS 101 : Your First Step into Cloud",
     description:
-      "An introductory cloud session covering essential AWS concepts, cloud fundamentals, and opportunities in cloud computing.",
-    date: "Previous Event",
-    location: "Lahore",
-    category: "Technical Session",
-    image: "/events/cloud-101.jpg",
+      "A beginner-friendly AWS session designed to introduce cloud computing, explore career opportunities, and help students publish their projects online through a guided AWS Amplify deployment.",
+    date: "21 June, 2026",
+    time: "5:00 PM – 7:00 PM PKT",
+    location: "Online via Google Meet",
+    category: "Cloud Workshop",
+    image: "/aws-101.png",
     status: "previous",
-    highlightsUrl: "#",
   },
   {
-    id: 5,
-    title: "AWS Cloud Quest Level 3",
+    id: 3,
+    title: "Cloud Quest LvL3:The Definition.",
     description:
-      "A hands-on cloud engineering experience focused on scalable infrastructure, load balancing, and high availability.",
-    date: "Previous Event",
-    location: "Systems Limited, Lahore",
+      "A hands-on cloud engineering event that transformed participants into live testers, demonstrating how AWS Auto Scaling and Load Balancing maintain application availability under high traffic conditions.",
+    date: "11 July, 2026",
+    time: "1:00 PM – 6:00 PM PKT",
+    location: "Systems Ltd.",
     category: "Cloud Challenge",
-    image: "/events/cloud-quest-level-3.jpg",
+    image: "/Cloud-Quest-Lvl3.png",
     status: "previous",
-    highlightsUrl: "#",
-  },
-  {
-    id: 6,
-    title: "Community Learning Session",
-    description:
-      "A collaborative session that brought together students and cloud enthusiasts for practical learning and networking.",
-    date: "Previous Event",
-    location: "Lahore",
-    category: "Community",
-    image: "/events/community-learning-session.jpg",
-    status: "previous",
-    highlightsUrl: "#",
   },
 ];

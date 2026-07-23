@@ -3,11 +3,14 @@ import { useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
+   { label: "About", href: "#about" },
   { label: "Events", href: "#events" },
   { label: "Team", href: "#team" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#join" },
 ];
+
+const MEETUP_URL = "https://www.meetup.com/aws-sbg-at-lahore-garrison-university/"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +48,9 @@ const Navbar = () => {
           ))}
 
           <a
-            href="#join"
+            href= {MEETUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-xl bg-green-500 px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-green-600 hover:scale-105"
           >
             Join Community
